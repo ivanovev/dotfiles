@@ -14,6 +14,7 @@ set autowrite
 
 highlight Comment ctermfg=darkgreen
 set listchars+=precedes:<,extends:>,tab:>-,trail:-
+nmap <leader>l :set list!<CR>
 
 set switchbuf=usetab,newtab
 
@@ -26,8 +27,8 @@ map <F7> :cn<CR>
 map <F8> :cp<CR>
 map <F9> :cclose<CR>
 
-map <leader>f :CommandT<CR>
-map <leader>b :CommandTBuffer<CR>
+nmap <leader>f :CommandT<CR>
+nmap <leader>b :CommandTBuffer<CR>
 
 nnoremap  <Leader>z    :let &scrolloff=999-&scrolloff<CR>
 
