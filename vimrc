@@ -18,6 +18,10 @@ nmap <leader>l :set list!<CR>
 
 set switchbuf=usetab,newtab
 
+nnoremap <A-Left>   :tabprevious<CR>
+nnoremap <A-Right>  :tabnext<CR>
+nnoremap <A-Insert> :tabnew<CR>
+
 map <F2> :wa<CR>
 map <F3> :NERDTreeToggle<CR>
 map <F4> :TagbarToggle<CR> 
