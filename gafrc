@@ -1,0 +1,8 @@
+
+(make-backup-files "disabled")
+
+(component-library "/home/iev/geda/cvs/www/user/evgeny_ivanov/symbols")
+(component-library "/home/iev/geda/cvs/www/user/evgeny_ivanov/symbols/connector")
+(component-library "/home/iev/geda/symbols_local")
+(component-library "/home/iev/geda/symbols_local/geda")
+

@@ -1,0 +1,7 @@
+
+(warp-cursor "disabled")
+
+(load-from-path "auto-uref.scm")
+(add-hook! add-component-hook auto-uref)
+(add-hook! copy-component-hook auto-uref)
+
