@@ -5,4 +5,5 @@
 (component-library "/home/iev/geda/cvs/www/user/evgeny_ivanov/symbols/connector")
 (component-library "/home/iev/geda/symbols_local")
 (component-library "/home/iev/geda/symbols_local/geda")
+(component-library "/home/iev/geda/symbols_local/tragesym")
 

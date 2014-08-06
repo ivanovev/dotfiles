@@ -1,4 +1,6 @@
 
+(log-window "later")
+(image-color "enabled")
 (warp-cursor "disabled")
 
 (load-from-path "auto-uref.scm")
