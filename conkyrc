@@ -1,0 +1,91 @@
+conky.config = {
+    background=true,
+    update_interval=5.0,
+    --use_xft yes
+    own_window=true,
+    own_window_transparent=true,
+    own_window_hints='undecorated,below,sticky,skip_taskbar,skip_pager',
+    own_window_class='Conky',
+    own_window_type='normal',
+    double_buffer='yes',
+    alignment='top_right',
+    --use_spacer none
+    --Gap between borders of screen and text
+    --same thing as passing -x at command line
+    gap_x=15,
+    gap_y=25,
+    total_run_times=0,
+    no_buffers=true,
+    cpu_avg_samples=4,
+    net_avg_samples=1,
+    background=true,
+
+    --- Colours, Sizes, Fonts & Margins --- #
+    --xftfont DejaVu Sans:size=10
+    font='-*-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-1',
+    xftalpha=1,
+    minimum_size='180 0',
+    --maximum_width=200,
+    stippled_borders=0,
+    border_width=1,
+    --default_color daff00
+    default_color='white',
+    --default_color 303030
+    --default_shade_color black
+    --default_outline_color=051300,
+    default_outline_color='lightgrey',
+    --own_window_colour 051300
+    own_window_colour='lightgrey',
+
+    --Draw borders around graphs
+    draw_graph_borders=true,
+
+    --- Text --- #
+    draw_outline=false,
+    draw_borders=false,
+    uppercase=false,
+    draw_shades=false
+    --override_utf8_locale yes
+    --text_buffer_size 2048
+}
+
+conky.text = [[
+${color lightgreen}System ${hr 2}
+${color lightgrey}        $nodename - $sysname $kernel
+${color lightgreen}${hr 2}
+${color lightgrey}Uptime:$color $uptime ${color lightgrey}- Load:$color $loadavg
+
+${color lightgreen}ACPI ${hr 2}
+${color lightgrey}Status: $acpiacadapter
+${color lightgrey}Battery: ${battery C1BF} / ${battery_time C1BF}
+
+${color lightgreen}CPU ${hr 2}
+${color lightgrey}CPU Temp: $color${acpitemp}C
+${color lightgrey}CPU Freq: $color${freq}
+${color lightgrey}CPU0:$color ${cpu cpu1}% $alignr${cpubar cpu1 7,260}
+${color lightgrey}CPU1:$color ${cpu cpu2}% $alignr${cpubar cpu2 7,260}
+
+${color lightgreen}Memory ${hr 2}
+${color lightgrey}RAM :$color $mem/$memmax - $memperc% ${membar 7}
+
+${color lightgreen}Disk ${hr 2}
+${color lightgrey}File systems:
+${color lightgrey}used: ${color white}${fs_used /}${tab 70}${color lightgrey}free:  ${color white}${fs_free /}
+${color lightgrey}Disk IO:
+${color lightgrey}read: ${color white}$diskio_read${tab 70}${color lightgrey}write: ${color white}$diskio_write
+
+${color lightgreen}Network ${hr 2}
+${color lightgrey}Address:${color white} ${addr enp1s0}
+${color lightgrey}Speed:
+${color lightgrey}down: ${color white}${downspeed enp1s0} k/s${tab 90}${color lightgrey}up: ${color white}${upspeed enp1s0} k/s
+${color lightgrey}${downspeedgraph enp1s0 20,170} $alignr${color lightgrey}${upspeedgraph enp1s0 20,170}
+${color lightgrey}Total:
+${color lightgrey}down: ${color white}${totaldown enp1s0}${tab 90}${color lightgrey}up: ${color white}${totalup enp1s0}
+
+${color lightgreen}Calendar ${hr 2}
+# ${color lightgrey}${execi 1 date +"%a %b %d"}
+# ${color lightgrey}${execi 1 cal}
+# ${color blue}${execi 1 ~/.conky/get_calendar.sh first_part}${color red}${execi 1 ~/.conky/get_calendar.sh today }${color blue}${execi 1 ~/.conky/get_calendar.sh second_part}
+${color lightgrey}${execi 1 ~/.conky/get_calendar.sh first_part}${color #68ABEF}${execi 1 ~/.conky/get_calendar.sh today }${color }${execi 1 ~/.conky/get_calendar.sh second_part}
+]]
+

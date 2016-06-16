@@ -3,8 +3,8 @@
 
 ;; (component-library "/home/iev/geda/cvs/www/user/evgeny_ivanov/symbols")
 ;; (component-library "/home/iev/geda/cvs/www/user/evgeny_ivanov/symbols/connector")
-(component-library "/home/iev/geda/symbols_local")
-(component-library "/home/iev/geda/symbols_local/geda")
+;; (component-library "/home/iev/geda/symbols_local")
+;; (component-library "/home/iev/geda/symbols_local/geda")
 ;; (component-library "/home/iev/geda/symbols_local/tragesym")
 (component-library "/home/iev/geda/gedasymbols/symbols")
 (component-library "/home/iev/geda/gedasymbols/symbols/connector")

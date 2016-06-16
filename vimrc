@@ -51,7 +51,7 @@ Plugin 'gmarik/Vundle.vim'      " let Vundle manage Vundle, required
 "---------=== Code/project navigation ===-------------
 Plugin 'scrooloose/nerdtree'            " Project and file navigation
 Plugin 'majutsushi/tagbar'              " Class/module browser
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()            " required
 filetype on
